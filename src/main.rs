@@ -32,3 +32,15 @@ fn main() {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use std::net::TcpListener;
+
+    #[test]
+    #[should_panic]
+    fn fail_when_binding_to_occupied_server() {
+        let _listener1 = TcpListener::bind("0.0.0.0:8080").expect("Failed to start TCP listener server");
+        let _listener2 = TcpListener::bind("0.0.0.0:8080").expect("Failed to start TCP listener server");
+    }
+}
