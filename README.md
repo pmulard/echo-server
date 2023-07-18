@@ -1,6 +1,6 @@
 ##  Overview 
 <p>
-A TCP echo server actually consists of two servers, a client and a listener, which transmit data back and forth. It is a fairly simple concept - the client sends data to the listener, and the listener sends the same data immediately back to the client. This server uses standard in and out, so the end result is the client types into their terminal and the same text is then printed out. It looks like this:
+A TCP echo server is a fairly simple concept - a client sends data to a listener server, and the listener sends the same data immediately back to the client. In addition to the echo server, this project contains a client server using standard in and out. So, the end result is the client types into their terminal and the same text is then printed out again. It looks like this:
 </p>
 
 ```bash
